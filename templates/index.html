@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>
+        <img src="https://www.citypng.com/public/uploads/preview/png-breast-cancer-awareness-ribbon-clipart-704081694710516bazjs7mbci.png?v=2024111612" height="60" width="60"/>
+        Breast Cancer Prediction Model
+        <img src="https://www.citypng.com/public/uploads/preview/png-breast-cancer-awareness-ribbon-clipart-704081694710516bazjs7mbci.png?v=2024111612" height="60" width="60"/>
+    </h1>
+
+    <form action="/predict" method="post">
+        <h2>Input</h2>
+        <div class="row1">
+            <label for="mean_radius">Mean Radius:</label>
+            <input type="number" step="any" name="mean_radius" required>
+            <label for="mean_texture">Mean Texture:</label>
+            <input type="number" step="any" name="mean_texture" required>
+            <label for="mean_perimeter">Mean Perimeter:</label>
+            <input type="number" step="any" name="mean_perimeter" required>
+            <label for="mean_area">Mean Area:</label>
+            <input type="number" step="any" name="mean_area" required>
+            <label for="mean_smoothness">Mean Smoothness:</label>
+            <input type="number" step="any" name="mean_smoothness" required>
+        </div>
+        <br><br>
+        <div class="row2">
+            <label for="mean_compactness">Mean Compactness:</label>
+            <input type="number" step="any" name="mean_compactness" required>
+            <label for="mean_concavity">Mean Concavity:</label>
+            <input type="number" step="any" name="mean_concavity" required>
+            <label for="mean_concave_points">Mean Concave Points:</label>
+            <input type="number" step="any" name="mean_concave_points" required>
+            <label for="mean_symmetry">Mean Symmetry:</label>
+            <input type="number" step="any" name="mean_symmetry" required>
+            <label for="mean_fractal_dimension">Mean Fractal Dimension:</label>
+            <input type="number" step="any" name="mean_fractal_dimension" required>
+        </div>
+        <br><br>
+        <div class="row3">
+            <label for="radius_error">Radius Error:</label>
+            <input type="number" step="any" name="radius_error" required>
+            <label for="texture_error">Texture Error:</label>
+            <input type="number" step="any" name="texture_error" required>
+            <label for="perimeter_error">Perimeter Error:</label>
+            <input type="number" step="any" name="perimeter_error" required>
+            <label for="area_error">Area Error:</label>
+            <input type="number" step="any" name="area_error" required>
+            <label for="smoothness_error">Smoothness Error:</label>
+            <input type="number" step="any" name="smoothness_error" required>
+        </div>
+        <br><br>
+        <div class="row4">
+            <label for="compactness_error">Compactness Error:</label>
+            <input type="number" step="any" name="compactness_error" required>
+            <label for="concavity_error">Concavity Error:</label>
+            <input type="number" step="any" name="concavity_error" required>
+            <label for="concave_points_error">Concave Points Error:</label>
+            <input type="number" step="any" name="concave_points_error" required>
+            <label for="symmetry_error">Symmetry Error:</label>
+            <input type="number" step="any" name="symmetry_error" required>
+            <label for="fractal_dimension_error">Fractal Dimension Error:</label>
+            <input type="number" step="any" name="fractal_dimension_error" required>
+        </div>
+        <br><br>
+        <div class="row5">
+            <label for="worst_radius">Worst Radius:</label>
+            <input type="number" step="any" name="worst_radius" required>
+            <label for="worst_texture">Worst Texture:</label>
+            <input type="number" step="any" name="worst_texture" required>
+            <label for="worst_perimeter">Worst Perimeter:</label>
+            <input type="number" step="any" name="worst_perimeter" required>
+            <label for="worst_area">Worst Area:</label>
+            <input type="number" step="any" name="worst_area" required>
+            <label for="worst_smoothness">Worst Smoothness:</label>
+            <input type="number" step="any" name="worst_smoothness" required>
+        </div>
+        <br><br>
+        <div class="row6">
+            <label for="worst_compactness">Worst Compactness:</label>
+            <input type="number" step="any" name="worst_compactness" required>
+            <label for="worst_concavity">Worst Concavity:</label>
+            <input type="number" step="any" name="worst_concavity" required>
+            <label for="worst_concave_points">Worst Concave Points:</label>
+            <input type="number" step="any" name="worst_concave_points" required>
+            <label for="worst_symmetry">Worst Symmetry:</label>
+            <input type="number" step="any" name="worst_symmetry" required>
+            <label for="worst_fractal_dimension">Worst Fractal Dimension:</label>
+            <input type="number" step="any" name="worst_fractal_dimension" required>
+        </div>
+        <br><br>
+        <div>
+            <button type="submit" style="width: 150px; height: 50px; font-size: 25px;">Predict</button>
+        </div>
+    </form>
+</body>
+</html>
